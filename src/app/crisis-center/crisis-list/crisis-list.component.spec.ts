@@ -1,26 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroListComponent } from './hero-list.component';
+import { CrisisListComponent } from './crisis-list.component';
 
-describe('HeroListComponent', () => {
-  let component: HeroListComponent;
-  let fixture: ComponentFixture<HeroListComponent>;
+describe('CrisisListComponent', () => {
+  let component: CrisisListComponent;
+  let fixture: ComponentFixture<CrisisListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroListComponent ]
-
+      declarations: [ CrisisListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroListComponent);
+    fixture = TestBed.createComponent(CrisisListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  // TODO: how to test lazyloading component
   // it('should create', () => {
   //   expect(component).toBeTruthy();
   // });

@@ -12,6 +12,6 @@ export class AppComponent {
   title = 'angular-router-sample';
 
   getAnimationData(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 }

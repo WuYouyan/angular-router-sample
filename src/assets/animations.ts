@@ -1,10 +1,10 @@
 import {
-    trigger, animateChild, group, 
+    trigger, animateChild, group,
     transition, animate, style, query
 } from '@angular/animations';
 
 // Routable animations
-export const slideInAnimation  = 
+export const slideInAnimation  =
     trigger('routeAnimation', [
         transition('heroes <=> hero', [
             style({ position: 'relative'}),
@@ -30,4 +30,4 @@ export const slideInAnimation  =
             ]),
             query(':enter', animateChild()),
         ])
-    ])
+    ]);
