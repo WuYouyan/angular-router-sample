@@ -27,11 +27,14 @@ export class HeroDetailComponent implements OnInit {
         this.service.getHero(params.get('id'))
       )
     );
+    // Alternative method without Observable : snapshot
+    // let id = this.route.snapshot.paramMap.get('id');
+    // this.hero$ = this.service.getHero(id);
   }
 
   gotoHeroes(hero: Hero): void {
-    let heroId = hero ? hero.id : null ; 
-    this.router.navigateByUrl("/heroes");
+    const heroId = hero ? hero.id : null ;
+    this.router.navigate(['/heroes', { id: heroId, foo: 'foo' }]);
   }
 
 

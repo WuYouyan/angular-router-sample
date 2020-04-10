@@ -20,7 +20,7 @@ import { HeroesModule } from './heroes/heroes.module';
     BrowserModule,
     FormsModule,
     HeroesModule,
-    AppRoutingModule,    
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

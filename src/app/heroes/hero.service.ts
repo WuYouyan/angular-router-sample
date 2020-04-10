@@ -23,7 +23,7 @@ export class HeroService {
   getHero(id: number | string): Observable<Hero> {
     return this.getHeroes().pipe(
       // (+) before `id` turns the string into a number
-      map( (heroes: Hero[]) => 
+      map( (heroes: Hero[]) =>
         heroes.find(hero => hero.id === +id)
       )
     );

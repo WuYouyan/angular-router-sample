@@ -3,7 +3,7 @@ import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { HeroService }  from '../hero.service';
+import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
 
 @Component({
@@ -14,7 +14,7 @@ import { Hero } from '../hero';
 export class HeroListComponent implements OnInit {
 
   heroes$: Observable<Hero[]>;
-  
+
   selectedId: number;
 
   constructor(

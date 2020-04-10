@@ -7,13 +7,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   {path: 'crisis-center', component: CrisisListComponent },
-  {path: 'heroes', loadChildren: () =>import('./heroes/heroes.module').then(m => m.HeroesModule) },
+  {path: 'heroes', loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule) },
   {path: '', redirectTo: '/heroes', pathMatch: 'full' },
   {path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, 
+  imports: [RouterModule.forRoot(routes,
     {enableTracing: true})],
   exports: [RouterModule]
 })
