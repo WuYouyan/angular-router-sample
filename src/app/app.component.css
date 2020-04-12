@@ -21,6 +21,6 @@ nav a:hover {
     background-color: #CFD8DC;
 }
 
-nav a:active {
+nav a.active {
     color: rgba(50, 50, 241, 0.856);
 }
