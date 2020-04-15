@@ -25,8 +25,7 @@ export class CanDeactivateGuard implements CanDeactivate<CrisisDetailComponent> 
   canDeactivate(
     component: CrisisDetailComponent,
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> | boolean {
+    state: RouterStateSnapshot ): Observable<boolean> | boolean {
     // Get the Crisis Center ID
     console.log(route.paramMap.get('id'));
 

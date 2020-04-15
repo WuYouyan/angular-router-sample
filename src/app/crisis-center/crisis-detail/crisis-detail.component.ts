@@ -25,27 +25,27 @@ export class CrisisDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.route.data
-    //   .subscribe((data: { crisis: Crisis }) => {
-    //     this.editName = data.crisis.name;
-    //     this.crisis = data.crisis;
-    //   });
-    this.getCrisis();
+    this.route.data
+      .subscribe((data: { crisis: Crisis }) => {
+        this.editName = data.crisis.name;
+        this.crisis = data.crisis;
+      });
+    // this.getCrisis();
   }
 
-  getCrisis(): void {
-    this.route.paramMap.pipe(
-      switchMap(
-        (param: ParamMap) =>
-          this.crisisService.getCrisis(param.get('id'))
-        )
-    )
-    .subscribe( (crisis: Crisis) => {
-      this.crisis = crisis;
+  // getCrisis(): void {
+  //   this.route.paramMap.pipe(
+  //     switchMap(
+  //       (param: ParamMap) =>
+  //         this.crisisService.getCrisis(param.get('id'))
+  //       )
+  //   )
+  //   .subscribe( (crisis: Crisis) => {
+  //     this.crisis = crisis;
 
-    }
-    );
-  }
+  //   }
+  //   );
+  // }
   // or
   // getCrisis(): void {
   //   this.crisisService.getCrisis(
