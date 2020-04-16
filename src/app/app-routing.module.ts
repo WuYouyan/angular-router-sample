@@ -7,15 +7,18 @@ import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/heroes', pathMatch: 'full' },
-  {path: '**', component: PageNotFoundComponent },
+  {path: 'compose', component: ComposeMessageComponent, outlet: `popup`},
   {
     path:'admin', 
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule), 
     canLoad: [AuthGuard]
   },
-
-  {path: 'compose', component: ComposeMessageComponent, outlet: `popup`}
+  {
+    path: 'crisis-center',
+    loadChildren: () => import('./crisis-center/crisis-center.module').then(m => m.CrisisCenterModule)
+  },
+  {path: '', redirectTo: '/heroes', pathMatch: 'full' },
+  {path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
